@@ -2,7 +2,7 @@
 
 **Author:** Patrick Slayden  
 **Audience:** Chief Architects, CISOs, Principal API Engineers  
-**Classification:** Architectural White Paper (Anonymized Edition)
+**Classification:** Architectural White Paper
 
 ---
 
