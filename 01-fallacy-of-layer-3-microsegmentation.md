@@ -125,6 +125,6 @@ All automated workflows and AI agents must be registered in a centralized direct
 ## 6. References & Industry Standards
 
 - NIST SP 800‑207: Zero Trust Architecture  
-- Gartner Research: Network Microsegmentation Guidance  
+- DoD Zero Trust Reference Architecture v2.0  
 - Cloud Security Alliance (CSA): Zero Trust for AI Agents  
-- Forrester Research: Identity‑Centric Security Models  
+- CISA Zero Trust Maturity Model v2.0  
