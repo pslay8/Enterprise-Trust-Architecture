@@ -33,13 +33,13 @@ These limitations are well‑documented in Zero Trust research, which emphasizes
 ### 2.2 Directory and Gateway Fragmentation
 
 Large enterprises frequently operate with fragmented identity roots and uncoordinated API perimeters, creating systemic blind spots:
+```
+[External Identity Population] --> Customer Identity Provider
+                                                             --> Fragmented Identity Foundations
+[Internal Identity Population] --> Workforce Identity Provider
 
-[External Identity Population] ──> Customer Identity Provider ──┐
-                                                                ├──> Fragmented Identity Foundations
-[Internal Identity Population] ──> Workforce Identity Provider ──┘
-
-[Inbound Requests] ──> Heterogeneous API Gateway Layer ──> Inconsistent Policy Enforcement
-
+[Inbound Requests] --> Heterogeneous API Gateway Layer --> Inconsistent Policy Enforcement
+```
 Key fragmentation issues include:
 
 - **Directory Bifurcation:** Internal and external identity services evolve independently, preventing unified risk scoring, token lifecycles, or centralized policy orchestration.  
