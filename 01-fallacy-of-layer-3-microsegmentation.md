@@ -67,7 +67,7 @@ Thus, enterprises must treat AI agents as **Non‑Human Identities (NHIs)** subj
 ## 4. Target State Architecture: Identity‑Centric Zero Trust
 
 To mitigate these vulnerabilities, the enterprise must deprecate L3 segmentation as a primary control and adopt a multi‑layer Identity Fabric aligned with modern Zero Trust models.
-
+```
 [Inbound Request]
 │
 ▼
@@ -90,7 +90,7 @@ To mitigate these vulnerabilities, the enterprise must deprecate L3 segmentation
 │    - Stripped of Independent Auth Authority            │
 │    - Enforces Strict Least‑Privilege RBAC / ABAC       │
 └────────────────────────────────────────────────────────┘
-
+```
 ---
 
 ### 4.1 Technical Specification Matrix
