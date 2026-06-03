@@ -1,9 +1,10 @@
 # The Fallacy of Layer 3 Microsegmentation in Ephemeral AI Agent & Federated API Ecosystems
-
 **Author:** Patrick Slayden  
 **Audience:** Chief Architects, CISOs, Principal API Engineers  
 **Classification:** Architectural White Paper
-
+**Published:** 2026-05-30  
+**Last Updated:** 2026-06-02  
+**Version:** 1.1
 ---
 
 ## 1. Executive Summary
