@@ -5,7 +5,7 @@
 **Classification:** Architectural White Paper
 **Published:** 2026-06-02  
 **Last Updated:** 2026-06-02  
-**Version:** 1.0
+**Version:** 1.1
 
 ---
 
@@ -208,3 +208,30 @@ If you want your donut, finish it before TSA — because the Gateway doesn’t n
 The next installment in this series will cover **4.2 — The TSA Checkpoint (Identity Gateway)**, where pre‑authentication ends and the first real trust decision is made.  
 And for the record — the donut analogy wasn’t inspired by any personal airport mishaps on my part… though I know you’ll believe whatever version of that story you prefer. Seasoned traveler or not, some things are just impossible to defend.
 
+## Sources (Section 4.1.1 — Pre‑Authentication & Context Collection)
+
+These sources support the identity lookup, attribute updates, device‑signal handling, and boundary‑enforcement concepts in this section:
+
+- NIST SP 800‑63‑3 — Digital Identity Guidelines  
+  (Identity existence checks, claim validation, pre‑authentication signals)
+
+- NIST SP 800‑207 — Zero Trust Architecture  
+  (Context collection, dynamic signals, boundary enforcement)
+
+- NIST SP 800‑204B — Attribute‑Based Access Control  
+  (Attribute updates as state, not trust)
+
+- Microsoft Entra ID Conditional Access & Device Compliance  
+  (Device posture, risk signals, session context)
+
+- Azure AD Privileged Identity Management (PIM)  
+  (Entitlement changes affecting downstream authorization)
+
+- OpenID Connect Core  
+  (Claims, claim updates, identity metadata)
+
+- TSA Security Screening Procedures  
+  (Boundary rules overriding pre‑boundary behavior — the donut analogy)
+
+- OWASP API Security Top 10  
+  (Pre‑auth context vs. actual enforcement)
