@@ -2,8 +2,8 @@
 **Author:** Patrick Slayden  
 **Audience:** IT Professionals Transitioning Into Zero Trust Roles  
 **Classification:** Architectural White Paper  
-**Published:** 2026-06-02  
-**Last Updated:** 2026-06-02  
+**Published:** 2026-03-02  
+**Last Updated:** 2026-03-02  
 **Version:** 1.0
 
 
