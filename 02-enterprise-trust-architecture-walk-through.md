@@ -4,7 +4,7 @@
 **Classification:** Architectural White Paper  
 **Published:** 2026-06-03  
 **Last Updated:** 2026-06-06 
-**Version:** 1.0
+**Version:** 1.1
 
 
 ## 1. Executive Summary
