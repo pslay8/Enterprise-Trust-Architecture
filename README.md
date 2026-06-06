@@ -49,6 +49,8 @@ This repository will expand as additional components, diagrams, and whitepapers 
 ## Published White Papers
 
 - [The Fallacy of Layer 3 Microsegmentation](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/01-fallacy-of-layer-3-microsegmentation.md)
+- [Zero Trust Starts Before the Gate — Airline Kiosk & Baggage Check (Pre‑Authentication & Context Collection)](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/04.1.1-airline-kiosk-and-baggage-check.md)
+- [The TSA Checkpoint (Identity Gateway)](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/04.2-tsa-checkpoint-identity-gateway.md)
 
 ---
 
