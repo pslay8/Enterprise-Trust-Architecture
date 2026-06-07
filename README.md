@@ -50,7 +50,7 @@ This repository will expand as additional components, diagrams, and whitepapers 
 
 ## Published White Papers
 
-- [The Fallacy of Layer 3 Microsegmentation](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/01-fallacy-of-layer-3-microsegmentation.md)
+- [The Fallacy of Layer 3 Microsegmentation has moved to the slayden-architecture-portfoilo under papers](https://github.com/plsay8/slayden-architecture-portfolio/papers/blob/main/)
 - [Enterprise-Trust Architecture: Identity as the Foundation Security Boundary](https://github.com/plsay8/Enterprise-Trust-Architecture/blob/main/02-enterprise-trust-architecture-walk-through.md)
 - [Airline Kiosk & Baggage Check (Pre‑Authentication & Context Collection)](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/03-airline-kiosk-and-baggage-check-pre-authentication-and-context-collection.md)
 
