@@ -1,5 +1,3 @@
-# Enterprise‑Trust Architecture
-
 # Enterprise‑Trust Architecture (ETA)™
 ## Powered by The Trust Boundary Compass™
 A navigational framework authored by Patrick Slayden that maps the complete Enterprise‑Trust lifecycle using a boundary‑anchored, identity‑driven model.
