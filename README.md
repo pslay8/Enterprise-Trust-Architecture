@@ -1,10 +1,12 @@
 # Enterprise‑Trust Architecture (ETA)™
-## Powered by The Trust Boundary Compass™
+## Powered by The Trust Boundary Compass (TBC)™
 A navigational framework authored by Patrick Slayden that maps the complete Enterprise‑Trust lifecycle using a boundary‑anchored, identity‑driven model.
 
 © 2026 Patrick Slayden. All rights reserved.
 
-The Trust Boundary Compass™ name, metaphor, lifecycle structure, and associated diagrams are original works by the author and may not be reproduced without attribution.
+The Trust Boundary Compass name, metaphor, lifecycle structure, and associated diagrams are original works by the author and may not be reproduced without attribution.
+
+© 2026 Patrick Slayden. All rights reserved.
 
 ## Purpose
 The goal of this architecture is to provide a clear, implementation‑ready framework for organizations transitioning away from perimeter‑based security toward identity‑centric, Zero‑Trust‑aligned design.
@@ -14,30 +16,31 @@ It establishes the core components, flows, and trust boundaries required to secu
 
 ## Architectural Overview
 
-The Enterprise‑Trust Architecture is built on three foundational zones:
+The Enterprise‑Trust Architecture is anchored by **The Trust Boundary Compass™**, which defines four cardinal trust pillars:
 
-### 1. Identity Zone  
-The authoritative source of authentication, token issuance, and identity assurance.  
-Includes the Identity Gateway, internal STS, and token‑generation pipeline.
+### **1. Identity Boundary**
+The authoritative source of authentication, token issuance, assurance levels, and identity lifecycle governance.
 
-### 2. Control Plane Zone  
-The policy‑decision and risk‑evaluation layer.  
-Includes the PDP, policy store, risk‑signal ingestion, and continuous authorization logic.
+### **2. Device Boundary**
+Evaluates device posture, health, attestation, and trustworthiness before granting access to protected resources.
 
-### 3. Data Plane Zone  
-The enforcement and workload‑execution layer.  
-Includes service endpoints, mesh sidecars, microsegmentation boundaries, and runtime policy enforcement.
+### **3. Network Boundary**
+Defines the transport‑layer trust envelope, enforcing encrypted pathways, gateway federation, and Zero‑Trust‑aligned routing.
 
-Each zone is explicitly separated by trust boundaries, with all flows authenticated, authorized, and evaluated continuously.
+### **4. Workload Boundary**
+Governs service‑to‑service trust, API authorization, NHI (Non‑Human Identity) controls, and runtime policy enforcement.
+
+These four boundaries form the navigational model of the Trust Boundary Compass, ensuring that every request is authenticated, authorized, evaluated, and continuously re‑verified across the entire Enterprise‑Trust lifecycle.
 
 ---
 
 ## Repository Contents
 
 - Core architectural description  
+- Trust Boundary Compass model  
 - Identity flow and token‑issuance model  
 - Control‑plane decision logic  
-- Data‑plane enforcement patterns  
+- Workload and service‑mesh enforcement patterns  
 - Reference diagrams and templates  
 - Supporting documentation and addendums  
 
