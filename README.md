@@ -1,15 +1,17 @@
 # Enterprise‑Trust Architecture
 
-The Enterprise‑Trust Architecture defines a modern, identity‑anchored security model built on verifiable authentication, continuous authorization, and explicit trust boundaries. This repository contains the conceptual model, reference diagrams, and supporting materials that describe how identity, policy, and workload protection converge into a unified trust fabric.
+# Enterprise‑Trust Architecture
 
----
+## The Trust Boundary Compass™
+A navigational framework authored by Patrick Slayden that maps the complete Enterprise‑Trust lifecycle using a boundary‑anchored, identity‑driven model.
+
+© 2026 Patrick Slayden. All rights reserved.
+
+The Trust Boundary Compass™ name, metaphor, lifecycle structure, and associated diagrams are original works by the author and may not be reproduced without attribution.
 
 ## Purpose
-
-The goal of this architecture is to provide a clear, implementation‑ready framework for organizations transitioning away from perimeter‑based security toward identity‑centric, Zero‑Trust‑aligned design.  
+The goal of this architecture is to provide a clear, implementation‑ready framework for organizations transitioning away from perimeter‑based security toward identity‑centric, Zero‑Trust‑aligned design.
 It establishes the core components, flows, and trust boundaries required to secure hybrid, multi‑cloud, and regulated environments.
-
-This repository serves as the authoritative source for the Enterprise‑Trust model, including its identity flow, control‑plane logic, and data‑plane enforcement patterns.
 
 ---
 
