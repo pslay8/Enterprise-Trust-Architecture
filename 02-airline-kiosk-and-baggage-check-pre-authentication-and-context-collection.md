@@ -1,65 +1,128 @@
-# Airline Kiosk & Baggage Check → Pre‑Authentication & Context Collection  
-### Part Two of “Enterprise Trust Architecture: Identity as the Foundational Security Boundary.”  
+# Airline Kiosk & Baggage Check → Pre‑Authentication & Context Collection
+**Part Two of “Enterprise‑Trust Architecture: Identity as the Foundational Security Boundary”**  
 **Author:** Patrick Slayden  
 **Audience:** IT Professionals Transitioning Into Zero Trust Roles  
-**Classification:** Architectural White Paper
-**Published:** 2026-06-06  
-**Last Updated:** 2026-06-06 
-**Version:** 1.1
+**Classification:** Architectural White Paper  
+**Published:** 2026‑06‑06  
+**Last Updated:** 2026‑06‑07  
+**Version:** 2.0  
+
+## 1. Executive Summary
+In the Enterprise‑Trust model, the airport journey begins long before TSA. Section 4.1.1 is where the architecture truly starts: the moment a request first interacts with the enterprise. This stage is not authentication and not authorization. It is **context collection** — identity lookup, attribute updates, device signals, and entitlement changes that prepare the request for the first real enforcement point: the Identity Gateway (TSA).
+
+This paper expands that section into a full, standalone narrative. It recaps the broader Enterprise‑Trust model, introduces the **Trust Boundary Compass™**, and then dives deep into the mechanics of pre‑authentication: what it is, what it is not, and why confusing it with trust leads to **architectural breakdown**.
 
 ---
 
-# Executive Summary
-In the Enterprise‑Trust model, the airport journey begins long before TSA. Section **4.1.1** is where the architecture truly starts: the moment a request first interacts with the enterprise. This stage is **not authentication** and **not authorization**. It is **context collection** — identity lookup, attribute updates, device signals, and entitlement changes that prepare the request for the first real enforcement point: the Identity Gateway (TSA).
-
-This paper expands that section into a full, standalone narrative. It recaps the broader Enterprise‑Trust model, then dives deep into the mechanics of pre‑authentication: what it is, what it is not, and why confusing it with trust leads to architectural failure.
-
----
-
-# Context: Where We Are in the Enterprise‑Trust Journey
+## 2. Context: Where We Are in the Enterprise‑Trust Journey
 In the main Enterprise‑Trust paper, the airport metaphor frames identity as the foundational security boundary. The journey so far:
 
 - **External Network → Arriving at the Airport**  
-  You begin as an unknown identity. Humans can freely enter the public side of the airport — the enterprise equivalent of an unauthenticated external network. The airport doesn’t know who you are or why you’re there. Maybe you’re flying. Maybe you’re picking someone up. Maybe you’re just grabbing lunch.  
-  No trust decision has been made yet.
+  You begin as an unknown identity. Humans can freely enter the public side of the airport — the enterprise equivalent of an unauthenticated external network. The airport doesn’t know who you are or why you’re there. Maybe you’re flying. Maybe you’re picking someone up. Maybe you’re just grabbing lunch. No trust decision has been made yet.
 
 - **4.1.1 Airline Kiosk & Baggage Check → Pre‑Authentication & Context Collection**  
-  The first meaningful interaction occurs when you approach an airline kiosk or counter. That moment signals intent: you want access to the secure side of the airport.  
-  This is where pre‑authentication begins.
-
-## Human vs. Non‑Human Entry Paths
-Humans can exist in the “public area” without identity.  
-**Non‑human identities cannot.**
-
-APIs, workloads, and AI agents never casually appear inside an enterprise. They don’t wander the lobby. They don’t browse the gift shop. They only “arrive” when they present:
-
-- a client credential  
-- a workload identity  
-- a managed identity  
-- a service principal  
-- or an agent persona  
-
-Where humans begin with **zero context**, non‑human identities begin with **declared intent**.
-
-Both follow the same architectural stages, but their entry conditions differ:
-
-- **Humans:**  
-  Public area → kiosk → TSA → secure zone  
-
-- **Non‑humans:**  
-  Identity assertion → pre‑authentication → gateway → secure zone  
-
-This paper expands Section 4.1.1 into a full architectural chapter for both identity types.
+  The first meaningful interaction occurs when you approach an airline kiosk or counter. That moment signals intent: you want access to the secure side of the airport. This is where pre‑authentication begins.
 
 ---
 
-# 4.1.1 Airline Kiosk & Baggage Check → Pre‑Authentication & Context Collection
+# 3. The Trust Boundary Compass™  
+### *How Enterprise‑Trust Evaluates Identity Across the Journey*
+Before diving deeper into pre‑authentication, we must introduce the **Trust Boundary Compass™** — the model that explains *how* Enterprise‑Trust evaluates every request as it moves through the environment.
+
+The Compass defines **four pillars** that every request is evaluated against:
+
+---
+
+## 3.1 Identity — The Primary Boundary
+Identity answers the question: **Who or what is making the request?**
+
+This includes:
+
+- human identities  
+- workload identities  
+- service principals  
+- managed identities  
+- federated identities  
+- claims, attributes, and entitlements  
+
+Identity is the **core** of Enterprise‑Trust.  
+Every other pillar is context around identity.
+
+---
+
+## 3.2 Device — The Posture of the Request
+Device answers: **What is the request coming from?**
+
+Enterprise‑Trust evaluates:
+
+- device compliance  
+- attestation  
+- OS version  
+- risk posture  
+- token binding  
+- configuration and health  
+
+A valid identity on a non‑compliant device is **not trusted**.
+
+---
+
+## 3.3 Network — The Path, Not the Trust
+Network answers: **Where is the request coming from?**
+
+Not in the old “trusted network” sense — Enterprise‑Trust rejects that idea — but in terms of:
+
+- network path  
+- segmentation  
+- service mesh identity  
+- east‑west authentication  
+- boundary transitions  
+
+Network is **context**, not trust.
+
+---
+
+## 3.4 Workload — The Intent of the Request
+Workload answers: **What is the request trying to do?**
+
+Enterprise‑Trust evaluates:
+
+- workload identity  
+- API behavior  
+- service‑to‑service calls  
+- token exchange  
+- multi‑hop identity propagation  
+- workload posture and drift  
+
+Workloads behave like passengers:  
+they move, they change, and they must be continuously evaluated.
+
+---
+
+## 3.5 Why the Compass Matters Here
+Pre‑authentication (the airline kiosk) is where the Compass first activates:
+
+- **Identity** → Do you exist?  
+- **Device** → What are you using?  
+- **Network** → Where are you coming from?  
+- **Workload** → What are you trying to do?  
+
+But — and this is the key —  
+**none of these pillars grant trust at this stage.**
+
+They only **collect context** so the first real enforcement point — the Identity Gateway (TSA) — can make a decision.
+
+This is why the Compass belongs *before* Section 4.1.1.  
+It sets the stage for understanding what pre‑authentication actually does.
+
+---
+
+# 4. 4.1.1 Airline Kiosk & Baggage Check → Pre‑Authentication & Context Collection
 **Takeaway:** Pre‑authentication does not grant access. It collects identity and device context so the Identity Gateway can make a real decision. Nothing more.
 
 ---
 
-## Identity Lookup at the Counter (Do You Even Exist?)
-The first thing the airline does is not trust you — it looks you up.
+## 4.1 Identity Lookup at the Counter (Do You Even Exist?)
+**First things first — the airline doesn’t trust you. It looks you up.**
 
 Before anything else, the system checks:
 
@@ -77,15 +140,13 @@ This is the IdP lookup. It answers one question:
 If the answer is no, nothing else proceeds.  
 No bags. No upgrades. No boarding pass.
 
-Same in Enterprise‑Trust:
-
-> **No identity record = no flow.**
+**Same in Enterprise‑Trust:**  
+**No identity record = no flow.**
 
 ---
 
-## Checking Bags → Attribute & Context Updates
-Checking a bag doesn’t authenticate you.  
-It updates your attributes:
+## 4.2 Checking Bags → Attribute & Context Updates
+Checking a bag doesn’t authenticate you. It updates your attributes:
 
 - baggage count  
 - weight  
@@ -102,16 +163,16 @@ Enterprise‑Trust treats this the same way:
 - new workload metadata  
 - new entitlements  
 
-These are telemetry, not trust.
+These are **telemetry**, not trust.
 
 ---
 
-## Seat Upgrades → Attribute Changes That Affect Later Access
+## 4.3 Seat Upgrades → Attribute Changes That Affect Later Access
 Upgrading your seat — at home, on your phone, or at the counter — is another attribute change.
 
 You’re not bypassing TSA.  
 You’re not getting special treatment at the checkpoint.  
-You’re simply changing what you’re entitled to *after* you authenticate.
+You’re simply changing what you’re entitled to **after** you authenticate.
 
 Just like:
 
@@ -120,14 +181,14 @@ Just like:
 - updated claims  
 - new privileges  
 
-Attributes change the experience *after* authentication, not before.
+Attributes change the experience **after authentication**, not before.
 
 ---
 
-## Adding a Second Device → Context Change, Not Trust
+## 4.4 Adding a Second Device → Context Change, Not Trust
 If work gives you a laptop and later adds a Windows tablet, your identity now has two devices instead of one.
 
-That’s a state change.
+That’s a **state change**.
 
 Enterprise‑Trust records:
 
@@ -137,13 +198,13 @@ Enterprise‑Trust records:
 - OS version  
 - risk baseline  
 
-Again: context, not trust.
+Again: **context, not trust.**
 
 The Identity Gateway will evaluate it later.
 
 ---
 
-## Buying a Donut Before TSA → Context That Doesn’t Cross the Boundary
+## 4.5 Buying a Donut Before TSA → Context That Doesn’t Cross the Boundary
 You can buy a donut right in front of TSA.  
 You can hold it. You can eat it. You can enjoy it.
 
@@ -172,14 +233,14 @@ Enterprise‑Trust works the same way:
 - compliance  
 - claims  
 
-These rules apply at the boundary, not before it.
+These rules apply **at the boundary**, not before it.
 
 And yes — sometimes it feels obsessive.  
 But it only takes **one donut bomb** to make things go sideways.
 
 ---
 
-# Pre‑Authentication Summary
+## 4.6 Pre‑Authentication Summary
 Everything before TSA is context collection:
 
 - identity lookup  
@@ -198,40 +259,21 @@ None of this crosses the boundary.
 Pre‑authentication prepares the request.  
 The Gateway decides what actually gets through.
 
-If you want your donut, finish it before TSA — because the Gateway doesn’t negotiate with pastries.
+If you want your donut, finish it before TSA —  
+because the Gateway doesn’t negotiate with pastries.
 
 ---
 
+# 5. Next in the Series
+The next installment in this series will cover **4.2 — The TSA Checkpoint (Identity Gateway)**, where pre‑authentication ends and the first real trust decision is made.
+
 ---
 
-### Next in the Series  
-The next installment in this series will cover **4.2 — The TSA Checkpoint (Identity Gateway)**, where pre‑authentication ends and the first real trust decision is made.  
-And for the record — the donut analogy wasn’t inspired by any personal airport mishaps on my part… though I know you’ll believe whatever version of that story you prefer. Seasoned traveler or not, some things are just impossible to defend.
-
-## Sources (Section 4.1.1 — Pre‑Authentication & Context Collection)
-
+# 6. Sources (Section 4.1.1 — Pre‑Authentication & Context Collection)
 These sources support the identity lookup, attribute updates, device‑signal handling, and boundary‑enforcement concepts in this section:
 
 - NIST SP 800‑63‑3 — Digital Identity Guidelines  
-  (Identity existence checks, claim validation, pre‑authentication signals)
-
 - NIST SP 800‑207 — Zero Trust Architecture  
-  (Context collection, dynamic signals, boundary enforcement)
-
 - NIST SP 800‑204B — Attribute‑Based Access Control  
-  (Attribute updates as state, not trust)
-
 - Microsoft Entra ID Conditional Access & Device Compliance  
-  (Device posture, risk signals, session context)
-
-- Azure AD Privileged Identity Management (PIM)  
-  (Entitlement changes affecting downstream authorization)
-
-- OpenID Connect Core  
-  (Claims, claim updates, identity metadata)
-
-- TSA Security Screening Procedures  
-  (Boundary rules overriding pre‑boundary behavior — the donut analogy)
-
-- OWASP API Security Top 10  
-  (Pre‑auth context vs. actual enforcement)
+- Azure
