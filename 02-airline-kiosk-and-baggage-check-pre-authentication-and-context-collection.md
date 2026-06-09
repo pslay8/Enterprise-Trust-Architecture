@@ -1,6 +1,6 @@
 <!-- PageHeader="Airline Kiosk & Baggage Check — PreAuthentication, Context Collection & Identity Normalization" -->
 
-# 4.1.1 Airline Kiosk & Baggage Check > Pre-Authentication & Context Collection  
+# 4.1.1 Airline Kiosk & Baggage Check — PreAuthentication, Context Collection & Identity Normalization  
 **Part Two of "Enterprise-Trust Architecture: Identity as the Foundational Security Boundary"**  
 **Author:** Patrick Slayden  
 **Audience:** IT Professionals Transitioning Into Zero Trust Roles**  
