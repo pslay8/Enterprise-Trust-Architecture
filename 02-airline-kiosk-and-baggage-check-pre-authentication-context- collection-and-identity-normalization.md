@@ -136,7 +136,7 @@ The Internal STS gives you **identity sovereignty**.
 
 ---
 
-## 4.1.1.8 So What Does the STS Actually Do?
+## 4.1.1.7a So What Does the STS Actually Do?
 ---
 
 The **STS** doesn’t decide who you are; it **converts who you are** into the **one boarding pass format** the entire airport understands.
