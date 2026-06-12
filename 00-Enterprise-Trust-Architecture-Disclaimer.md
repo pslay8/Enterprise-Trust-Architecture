@@ -1,4 +1,4 @@
-# Enterprise‑Trust Architecture™ — Comprehensive Disclaimer
+# Enterprise‑Trust Architecture Model™ — Comprehensive Disclaimer
 
 ## Vendor-Neutrality and Non-Endorsement Notice
 The technologies, platforms, and vendors referenced in this work (including but not limited to  
