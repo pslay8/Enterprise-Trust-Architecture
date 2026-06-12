@@ -1,7 +1,7 @@
 <!-- PageHeader="Enterprise‑Trust Architecture™: Identity as the Foundational Security Boundary" -->
 
-# Enterprise‑Trust Architecture™: Identity as the Foundational Security Boundary  
-**Part Two of "Enterprise-Trust Architecture: Identity as the Foundational Security Boundary"**
+# Enterprise‑Trust Architecture Model™: Identity as the Foundational Security Boundary  
+**Walk-through of the "Enterprise-Trust Architecture Model: Identity as the Foundational Security Boundary"**
 **Author:** Patrick Slayden  
 **Audience:** IT Professionals Transitioning into Zero Trust Roles  
 **Classification:** Architectural White Paper  
