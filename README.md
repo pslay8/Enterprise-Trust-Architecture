@@ -1,5 +1,9 @@
-# Enterprise‑Trust Architecture (ETA)™
-## Powered by The Trust Boundary Compass (TBC)™
+# Enterprise‑Trust Architecture™
+## (ETA)
+## Enterprise-Trust Architecture Model™
+## (ETBM)™
+### Powered by The Trust Boundary Compass™
+## (TBC)™
 A navigational framework authored by Patrick Slayden that maps the complete Enterprise‑Trust lifecycle using a boundary‑anchored, identity‑driven model.
 
 © 2026 Patrick Slayden. All rights reserved.
@@ -9,8 +13,8 @@ The Trust Boundary Compass name, metaphor, lifecycle structure, and associated d
 © 2026 Patrick Slayden. All rights reserved.
 
 ## Purpose
-The goal of this architecture is to provide a clear, implementation‑ready framework for organizations transitioning away from perimeter‑based security toward identity‑centric, Zero‑Trust‑aligned design.
-It establishes the core components, flows, and trust boundaries required to secure hybrid, multi‑cloud, and regulated environments.
+Enterprise‑Trust Architecture™ is the overarching framework that defines the complete lifecycle of identity‑anchored trust in modern enterprise systems.
+The Enterprise‑Trust Architecture Model (ETAM) represents the applied implementation of that framework — the structured model that maps how identity, device, network, and workload boundaries interact through the Trust Boundary Compass (TBC).
 
 ---
 
@@ -51,8 +55,6 @@ This repository will expand as additional components, diagrams, and whitepapers 
 ## Published White Papers
 
 - [The Fallacy of Layer 3 Microsegmentation has moved to the slayden-architecture-portfoilo under papers](https://github.com/pslay8/slayden-architecture-portfolio)
-- [Enterprise-Trust Architecture: Identity as the Foundation Security Boundary](https://github.com/plsay8/Enterprise-Trust-Architecture/blob/main/01-enterprise-trust-architecture-walk-through.md)
-- [Airline Kiosk & Baggage Check (Pre‑Authentication & Context Collection)](https://github.com/pslay8/Enterprise-Trust-Architecture/blob/main/02-airline-kiosk-and-baggage-check-pre-authentication-and-context-collection.md)
 
 ---
 
